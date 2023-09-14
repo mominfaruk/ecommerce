@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-bslyw+ybi-k86ogo-(82zj*9pyr473mm2w0gha_7a$b$0z_o=r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -77,22 +77,22 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'ak8zcii2zTmSW2qEuBVH',
-        'HOST': 'containers-us-west-123.railway.app',
-        'PORT': '7028',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'ak8zcii2zTmSW2qEuBVH',
+#         'HOST': 'containers-us-west-123.railway.app',
+#         'PORT': '7028',
+#     }
+# }
 
 
 # Password validation
@@ -134,7 +134,7 @@ STATIC_URL = 'static/'
 #     os.path.join(BASE_DIR, 'static')
 # ]
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 media_root=os.path.join(BASE_DIR, 'media')
 MEDIA_URL='/media/'
